@@ -1,0 +1,370 @@
+@charset "utf-8";
+@font-face {
+  font-family: Vollkorn;
+  src: url(../../webfonts/font/Vollkorn-Regular.woff) format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #17191a;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font: 1em Vollkorn, "맑은 돋움", sans-serif;
+  overflow: hidden;
+  color: #17191a;
+}
+.logo {
+  z-index: 100 !important;
+  cursor: pointer;
+  position: fixed;
+  width: 256px;
+  height: 130px;
+  right: 5%;
+  top: 7%;
+  background-image: url(../images/logo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.btn {
+  z-index: 500 !important;
+  cursor: pointer;
+  position: fixed;
+  left: 4%;
+  top: 7%;
+}
+.btn > div {
+  width: 50px;
+  height: 7px;
+  background: #17191a;
+  margin: 10px;
+  transition: all 0.5s;
+}
+.active.bar1 {
+  transform: translate(0, 17px) rotate(-45deg);
+  background: #fff !important;
+}
+.active.bar2 {
+  opacity: 0;
+}
+.active.bar3 {
+  transform: translate(0, -17px) rotate(45deg);
+  background: #fff !important;
+}
+.scroll {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1%;
+  z-index: 15;
+}
+.scroll li a {
+  display: block;
+  width: 12.5px;
+  height: 12.5px;
+  border-radius: 20px;
+  background: #17191a;
+  opacity: 0.8;
+  transition: all 0.5s;
+  margin-top: 20px;
+}
+.scroll li a {
+  margin-top: none;
+}
+.scroll li:hover a,
+.scroll li.on a {
+  font-size: 24px;
+  opacity: 1;
+  box-shadow: 0 0 0 1px #17191a inset;
+  background: #fff;
+}
+#fixed {
+  height: 100%;
+  width: 100%;
+}
+.menubox {
+  z-index: 100 !important;
+  position: fixed;
+  height: 100%;
+  /* width: 0; */
+  width: 20%;
+  left: -50%;
+  top: 0;
+  /* margin-left: -30%; */
+  background: #17191aad;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.menubox.on {
+  left: 0;
+}
+.menu {
+  position: relative;
+  height: 100%;
+  width: 80%;
+  padding-top: 50%;
+  margin: 0 auto;
+}
+.menu li a {
+  color: #fff;
+  font-size: 30px;
+}
+.menu a:hover,
+.lnb.on > a {
+  color: #bb2649;
+  font-style: italic;
+  transition: all 0.2s;
+}
+.menu .login {
+  position: absolute;
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #f6becb;
+  margin-top: 50px;
+  padding: 10%;
+}
+.sub {
+  margin: 5px 30px 10px;
+}
+.sub li a {
+  font-size: 22px;
+}
+.login li a {
+  color: #f6becb;
+  font-size: 20px;
+  line-height: 35px;
+}
+
+section {
+  width: 100%;
+  position: relative;
+}
+.videobox {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border-radius: 700px;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+  overflow: hidden;
+}
+.flowcontainer {
+  position: absolute;
+  bottom: 7%;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  height: 90px;
+}
+.flowbox {
+  height: 100%;
+  width: 6055px;
+  display: flex;
+  flex-wrap: nowrap;
+  animation: banner 30s linear infinite;
+}
+.flowbox div {
+  margin: 0 20px;
+}
+
+#about .slide {
+  width: 100%;
+  height: 100%;
+}
+.bx-wrapper {
+  height: 100%;
+}
+.bx-wrapper,
+.bx-viewport,
+.slidebox,
+.slide,
+.slide ul,
+.slide ul li {
+  width: 100%;
+  height: 100%;
+}
+.slidebox {
+  position: relative;
+}
+.slide ul li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(238, 238, 238, 0.28);
+}
+#about {
+  overflow: hidden;
+}
+#about .text {
+  z-index: 10;
+  position: absolute;
+  bottom: -40%;
+  /* bottom: 2%; */
+  box-sizing: border-box;
+  width: 100%;
+  height: 55%;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 2% 7%;
+  transition: all 0.3s ease-in-out;
+}
+#about .text p {
+  float: right;
+  width: 80%;
+  font-size: 28px;
+  color: #17191a;
+}
+#about .text p > strong {
+  color: #bb2649;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.mapbox {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.map {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 65%;
+  background: linear-gradient(
+    180deg,
+    rgba(247, 190, 203, 0.5) 0%,
+    rgba(23, 25, 26, 0.5) 100%
+  );
+}
+.map iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.maptxt {
+  text-align: center;
+}
+#coll .box {
+  width: 100%;
+  height: 100%;
+}
+#coll .txt {
+  text-align: center;
+  padding: 5% 0;
+}
+#coll .txt h1 {
+  font-size: 30px;
+  font-style: italic;
+}
+#coll .col_img {
+  margin: 0 auto;
+  height: 45%;
+  width: 70%;
+}
+.col_img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.col_img.img1 {
+  background-image: url(../images/coll1.jpg);
+}
+
+#more_coll {
+  width: 100%;
+  max-height: 4700px;
+}
+.col_img {
+  width: 80%;
+  height: 600px;
+}
+.col_img.img2 {
+  background-image: url(../images/coll2.jpg);
+}
+.col_img.img3 {
+  background-image: url(../images/coll3.jpg);
+}
+.col_img.img4 {
+  background-image: url(../images/coll4.jpg);
+}
+.col_img.img5 {
+  background-image: url(../images/coll5.jpg);
+}
+.col_img.img6 {
+  background-image: url(../images/coll6.jpg);
+}
+.col_img.img7 {
+  background-image: url(../images/coll7.jpg);
+}
+.col_img.img8 {
+  background-image: url(../images/coll8.jpg);
+}
+
+#more_coll .footer {
+  width: 100%;
+  height: 200px;
+  background: #f6becb62;
+  border-top: 3px solid #17191a77;
+  border-bottom: 3px solid #17191a77;
+  padding: 3% 0;
+  color: #17191a;
+  line-height: 28px;
+}
+#more_coll .gallery {
+  width: 100%;
+}
+#more_coll .gallery li {
+  margin: 0 auto;
+}
+.footer > p {
+  float: right;
+  font-style: italic;
+  margin-right: 20px;
+}
+.foot {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.footer h3 {
+  font-size: 20px;
+}
+.foot .sns {
+  display: flex;
+}
+.foot .sns > div {
+  margin-right: 10px;
+}
+.sns i {
+  font-size: 25px;
+  margin: 0 5px;
+}

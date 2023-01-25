@@ -1,0 +1,65 @@
+@charset "utf-8";
+@media screen and (max-width: 1300px) {
+  .menu .login {
+    padding: 5%;
+    display: block;
+  }
+}
+@media screen and (max-width: 1140px) {
+  .sub li a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .menu {
+    padding-top: 65%;
+  }
+  .menubox li a {
+    font-size: 20px;
+  }
+  .sub {
+    margin: 5%;
+  }
+  .sub li a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .menu {
+    padding-top: 80%;
+  }
+  .login ul li a {
+    font-size: 16px;
+    line-height: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menubox {
+    width: 30%;
+  }
+  .menu {
+    padding-top: 80%;
+  }
+  .login ul li a {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .menubox {
+    width: 45%;
+  }
+  .menu > li {
+    line-height: 20px;
+  }
+}
+
+/* 흐르는 배너 */
+@keyframes banner {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
