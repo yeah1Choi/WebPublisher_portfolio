@@ -20,7 +20,13 @@ $(function () {
       $("#nav li").eq(2).addClass("on");
     } else if (t >= ht * 3 && t < ht * 4) {
       $("#nav li").removeClass("on");
+      $("#nav li").eq(2).addClass("on");
+    } else if (t >= ht * 4 && t < ht * 5) {
+      $("#nav li").removeClass("on");
       $("#nav li").eq(3).addClass("on");
+    } else if (t >= ht * 5 && t < ht * 6) {
+      $("#nav li").removeClass("on");
+      $("#nav li").eq(4).addClass("on");
     }
   });
   $("section").on("mousewheel", function (event, delta) {
